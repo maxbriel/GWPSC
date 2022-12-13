@@ -13,7 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -30,7 +29,7 @@ jobs:
     - name: Commit results
       run: |
         git config --local user.email "actions@github.com"
-        git config --local user.name "Github Actions
+        git config --local user.name "Github Actions"
         git add comparison_plots/BPASS/*
         git commit -m 'Re-build plots'
         git push origin
